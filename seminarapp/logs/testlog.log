@@ -1,0 +1,8 @@
+Watching for file changes with StatReloader
+"GET /about/ HTTP/1.1" 200 41
+"GET /test/ HTTP/1.1" 200 173
+C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\seminarapp\settings.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /test/ HTTP/1.1" 200 173
+INFO basehttp "GET /test/ HTTP/1.1" 200 173
+INFO basehttp "GET /test/ HTTP/1.1" 200 173
