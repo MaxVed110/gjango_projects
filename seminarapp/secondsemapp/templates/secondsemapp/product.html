@@ -1,0 +1,12 @@
+{% extends 'secondsemapp/pattern.html' %}
+
+{% block content %}
+<p>Ниже представлены заказанные товары за последние {{ period }} дней:</p>
+
+<ul>
+{% for item in list_products %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
