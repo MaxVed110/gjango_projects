@@ -121,6 +121,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+MEDIA_URL = '/products/'
+MEDIA_ROOT = BASE_DIR / '/products/'
+
 LOGGING = {
     "version": 1,
     'disable_existing_loggers': False,

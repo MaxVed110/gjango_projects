@@ -15,6 +15,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=1)
     count_prod = models.DecimalField(max_digits=10, decimal_places=0)
     date_added = models.DateField()
+    product_img = models.ImageField(upload_to='products/', default=None)
 
 
 class Cell(models.Model):
