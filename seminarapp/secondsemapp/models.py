@@ -8,6 +8,9 @@ class Customer(models.Model):
     address = models.TextField()
     date_reg = models.DateField()
 
+    def __str__(self):
+        return self.name
+
 
 class Product(models.Model):
     name_prod = models.CharField(max_length=100)
@@ -17,9 +20,15 @@ class Product(models.Model):
     date_added = models.DateField()
     product_img = models.ImageField(upload_to='products/', default=None)
 
+    def __str__(self):
+        return self.name_prod
+
 
 class Cell(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product)
     total_cost = models.DecimalField(max_digits=15, decimal_places=1)
     date_registration = models.DateField()
+
+    def __str__(self):
+        return self.customer

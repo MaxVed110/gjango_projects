@@ -6,3 +6,438 @@ INFO autoreload Watching for file changes with StatReloader
 INFO basehttp "GET /test/ HTTP/1.1" 200 173
 INFO basehttp "GET /test/ HTTP/1.1" 200 173
 INFO basehttp "GET /test/ HTTP/1.1" 200 173
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py", line 6, in index
+    return render(request, "secondsemapp/index.html", content)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 3: 'content'. Did you forget to register or load this tag?
+ERROR basehttp "GET / HTTP/1.1" 500 143720
+WARNING log Not Found: /favicon.ico
+WARNING basehttp "GET /favicon.ico HTTP/1.1" 404 2275
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: pattern.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py", line 6, in index
+    return render(request, "secondsemapp/index.html", content)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: pattern.html
+ERROR basehttp "GET / HTTP/1.1" 500 129110
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET / HTTP/1.1" 200 227
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET / HTTP/1.1" 200 227
+WARNING log Not Found: /favicon.ico
+WARNING basehttp "GET /favicon.ico HTTP/1.1" 404 2486
+INFO basehttp "GET /admin HTTP/1.1" 301 0
+INFO basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4267
+INFO basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4267
+INFO basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO basehttp "GET /admin/ HTTP/1.1" 200 5852
+INFO basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO basehttp "GET / HTTP/1.1" 200 227
+INFO basehttp "GET /admin/auth/user/ HTTP/1.1" 200 11309
+INFO basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO basehttp "GET /admin/auth/user/add/ HTTP/1.1" 200 10988
+INFO basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+INFO basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO basehttp "GET /admin/auth/user/ HTTP/1.1" 200 11309
+INFO basehttp "GET /admin/auth/user/1/change/ HTTP/1.1" 200 22535
+INFO basehttp "GET /admin/auth/user/1/change/ HTTP/1.1" 200 22535
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15292
+INFO basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO basehttp "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+INFO basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO basehttp "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO basehttp "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO basehttp "POST /admin/auth/user/1/change/ HTTP/1.1" 302 0
+INFO basehttp "GET /admin/auth/user/ HTTP/1.1" 200 11530
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/auth/group/ HTTP/1.1" 200 7641
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/auth/group/add/ HTTP/1.1" 200 12143
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/ HTTP/1.1" 200 6179
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/ HTTP/1.1" 200 7830
+INFO basehttp "GET /admin/secondsemapp/cell/ HTTP/1.1" 200 8494
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/customer/ HTTP/1.1" 200 8522
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 8515
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/cell/ HTTP/1.1" 200 8494
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/cell/add/ HTTP/1.1" 200 13295
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO basehttp "GET /admin/secondsemapp/customer/add/?_to_field=id&_popup=1 HTTP/1.1" 200 7189
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/add/ HTTP/1.1" 200 12725
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "POST /admin/secondsemapp/product/add/ HTTP/1.1" 200 13373
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "POST /admin/secondsemapp/product/add/ HTTP/1.1" 302 0
+INFO basehttp "GET /admin/secondsemapp/product/add/ HTTP/1.1" 200 13024
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "POST /admin/secondsemapp/product/add/ HTTP/1.1" 302 0
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 10235
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/customer/add/ HTTP/1.1" 200 12068
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "POST /admin/secondsemapp/customer/add/ HTTP/1.1" 200 12297
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "POST /admin/secondsemapp/customer/add/ HTTP/1.1" 302 0
+INFO basehttp "GET /admin/secondsemapp/customer/add/ HTTP/1.1" 200 12371
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "POST /admin/secondsemapp/customer/add/ HTTP/1.1" 302 0
+INFO basehttp "GET /admin/secondsemapp/customer/ HTTP/1.1" 200 10251
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/cell/ HTTP/1.1" 200 8494
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 10009
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/customer/ HTTP/1.1" 200 10022
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\models.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\models.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/customer/ HTTP/1.1" 200 9994
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 9994
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/customer/ HTTP/1.1" 200 9994
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/cell/ HTTP/1.1" 200 8494
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/cell/add/ HTTP/1.1" 200 13450
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+ERROR log Internal Server Error: /admin/secondsemapp/cell/add/
+Traceback (most recent call last):
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 1804, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 926, in log_addition
+    object_repr=str(obj),
+TypeError: __str__ returned non-string (type Customer)
+ERROR basehttp "POST /admin/secondsemapp/cell/add/ HTTP/1.1" 500 113537
+INFO basehttp "GET /admin/secondsemapp/cell/add/ HTTP/1.1" 200 13450
+ERROR log Internal Server Error: /admin/secondsemapp/cell/add/
+Traceback (most recent call last):
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 1804, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 926, in log_addition
+    object_repr=str(obj),
+TypeError: __str__ returned non-string (type Customer)
+ERROR basehttp "POST /admin/secondsemapp/cell/add/ HTTP/1.1" 500 113589
+INFO basehttp "GET /admin/secondsemapp/cell/add/ HTTP/1.1" 200 13450
+INFO basehttp "GET /admin/secondsemapp/cell/ HTTP/1.1" 200 8494
+INFO basehttp "GET /admin/secondsemapp/customer/ HTTP/1.1" 200 9994
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 9994
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/2/change/ HTTP/1.1" 200 13602
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 9994
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 11231
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 12008
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 12462
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 12462
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 12556
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+ERROR log Internal Server Error: /admin/secondsemapp/product/
+Traceback (most recent call last):
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'quantity'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py", line 7, in reset_quantity
+    queryset.update(quantity=0)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\db\models\query.py", line 1188, in update
+    query.add_update_values(kwargs)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\db\models\sql\subqueries.py", line 88, in add_update_values
+    field = self.get_meta().get_field(name)
+  File "C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\venv\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Product has no field named 'quantity'
+ERROR basehttp "POST /admin/secondsemapp/product/ HTTP/1.1" 500 124888
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 12556
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 12556
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "POST /admin/secondsemapp/product/ HTTP/1.1" 302 0
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 12554
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/1/change/ HTTP/1.1" 200 13580
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/product/1/change/ HTTP/1.1" 200 13243
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO autoreload C:\Users\Максим\Desktop\Обучение\Программы\gjango_projects\seminarapp\secondsemapp\admin.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /admin/secondsemapp/product/1/change/ HTTP/1.1" 200 13256
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO basehttp "GET /admin/secondsemapp/product/1/delete/ HTTP/1.1" 200 8593
+INFO basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO basehttp "GET /admin/secondsemapp/product/1/change/ HTTP/1.1" 200 13256
+INFO basehttp "GET /admin/secondsemapp/product/ HTTP/1.1" 200 12554
